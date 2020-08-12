@@ -10,4 +10,22 @@
 yarn add pushover.js # or npm install pushover.js
 ```
 
+## Example
+
+```js
+const { Pushover } = require("../dist/index");
+
+const pushover = new Pushover("APPLICATION-TOKEN");
+
+async function init() {
+  await pushover.message.send({
+    title: "Hi there!",
+    message: "Sick notification",
+    user: "USER-TOKEN"
+  });
+}
+
+init();
+```
+
 Documentation is located [here](https://stingalleman.github.io/pushover.js/)
