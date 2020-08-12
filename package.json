@@ -1,7 +1,7 @@
 {
-  "name": "pushover.js",
+  "name": "@stingalleman/pushover.js",
   "version": "1.0.0",
-  "description": "pushover.js",
+  "description": "Modern node.js library for Pushover with Typescript support",
   "main": "dist/index",
   "files": [
     "dist"
