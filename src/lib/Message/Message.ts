@@ -1,6 +1,5 @@
 export interface MessagePostOptions {
-	user: string,
-	message: string,
+	user?: string,
 	attachment?: any,
 	device?: any,
 	title?: string,
