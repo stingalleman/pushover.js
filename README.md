@@ -18,11 +18,24 @@ const { Pushover } = require("../dist/index");
 const pushover = new Pushover("APPLICATION-TOKEN");
 
 async function init() {
-  await pushover.message.send({
-    title: "Hi there!",
+  await pushover.message.send("This is a notification title!", {
     message: "Sick notification",
     user: "USER-TOKEN"
   });
+}
+
+init();
+```
+
+You're also able to set a default user token:
+
+```js
+const { Pushover } = require("../dist/index");
+
+const pushover = new Pushover("APPLICATION-TOKEN", "USER-TOKEN");
+
+async function init() {
+  await pushover.message.send("This is a notification title!");
 }
 
 init();
