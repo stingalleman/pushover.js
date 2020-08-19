@@ -81,11 +81,20 @@
 <span class="hljs-keyword">const</span> pushover = <span class="hljs-keyword">new</span> Pushover(<span class="hljs-string">&quot;APPLICATION-TOKEN&quot;</span>);
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">await</span> pushover.message.send({
-    <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Hi there!&quot;</span>,
+  <span class="hljs-keyword">await</span> pushover.message.send(<span class="hljs-string">&quot;This is a notification title!&quot;</span>, {
     <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;Sick notification&quot;</span>,
     <span class="hljs-attr">user</span>: <span class="hljs-string">&quot;USER-TOKEN&quot;</span>
   });
+}
+
+init();</code></pre>
+				<p>You&#39;re also able to set a default user token:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { Pushover } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../dist/index&quot;</span>);
+
+<span class="hljs-keyword">const</span> pushover = <span class="hljs-keyword">new</span> Pushover(<span class="hljs-string">&quot;APPLICATION-TOKEN&quot;</span>, <span class="hljs-string">&quot;USER-TOKEN&quot;</span>);
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">await</span> pushover.message.send(<span class="hljs-string">&quot;This is a notification title!&quot;</span>);
 }
 
 init();</code></pre>
